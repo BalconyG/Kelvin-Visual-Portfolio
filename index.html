@@ -159,8 +159,8 @@ function showMedia(){
       pick('用 TidalCycles 編寫節奏與旋律，與同伴修改樂句。','Write rhythmic and melodic patterns in TidalCycles and vary them with a partner.'),
       pick('在 Estuary 裏使用 miniTidal，共同完成一段 Algorave 即興演出。','Use miniTidal in Estuary for a collaborative Algorave jam.')
     ])agenda.append(el('li','',step));
-    const link=el('a','pdf-link',pick('下載完整策劃案（Word）','Download the full proposal (Word)'));
-    link.href=w.src;link.download='WorkshopLiveCoding.docx';note.append(agenda,link);$('stage').append(note);return;
+    const link=el('a','pdf-link',pick('下載完整策劃案（Pdf）','Download the full proposal (Pdf)'));
+    link.href=w.src;link.download='WorkshopLiveCoding.pdf';note.append(agenda,link);$('stage').append(note);return;
   }
   if(w.kind==='video'){node=el('video');node.controls=true;node.playsInline=true;node.poster=w.thumb;node.preload='metadata';}
   else if(w.kind==='pdf'){node=el('iframe');node.title=title(w);}
